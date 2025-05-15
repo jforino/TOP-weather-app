@@ -14,9 +14,25 @@ export function insertWeatherData(APICallObject){
         let currentForecastDay = forecastArray[i]; 
         console.log(currentForecastDay);
 
+        let forecastDayDiv = document.createElement('div'); 
+        let forecastDayList = document.createElement('ul')
+
+        forecastDayDiv.append(forecastDayList); 
+
+        let forecastDayDate = document.createElement('li')
+        forecastDayDate.textContent = `Date: ${currentForecastDay.datetime}`; 
+
+        let forecastDayTemp = document.createElement('li'); 
+        forecastDayTemp.textContent = `Forecasted Temp: ${currentForecastDay.temp}`
+
+        forecastDayList.append(forecastDayDate, forecastDayTemp);
+
+
+        forecastDivContainer.append(forecastDayDiv); 
+        
+
 
     }
 
-    console.log(forecastArray); 
 
 }
