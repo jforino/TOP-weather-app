@@ -1,22 +1,27 @@
 import "./style.css"
 import { grabUserCitySearchInput } from './input-handler.js'
+import { callVisualCrossingAPI } from "./visualcrossingapi.js";
+import { insertWeatherData } from "./render-DOM.js";
 
-let userSearchTerm;
+let currentUserCitySearch;
+let userSearchResultsObject; 
 
-async function waitForUserInput() {
+async function waitForUserInputAndCallAPI() {
     while (true){
-        const input = await grabUserCitySearchInput(); 
+        const APICallResults = await grabUserCitySearchInput(); 
 
-        if (input == '' || input == userSearchTerm){
-            console.log('ERROR: Enter in a new search term');
-            continue;
-        }
+        console.log(APICallResults);
 
-        userSearchTerm = input;
-        console.log(`User search term is now: ${userSearchTerm}`); 
+        insertWeatherData(APICallResults); 
     }
 }
 
+function main(){
+
+    waitForUserInputAndCallAPI()
+    
+
+}
 
 
-waitForUserInput()
+main();

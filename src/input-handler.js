@@ -1,3 +1,5 @@
+import { callVisualCrossingAPI } from "./visualcrossingapi";
+
 export function grabUserCitySearchInput(){
 
     return new Promise((resolve) => {
@@ -9,7 +11,7 @@ export function grabUserCitySearchInput(){
         e.preventDefault(); 
 
         const input = userInputField.value;
-        resolve(input); 
+        resolve(callVisualCrossingAPI(input)); 
 
     }
    
