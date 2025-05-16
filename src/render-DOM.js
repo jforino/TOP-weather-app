@@ -10,29 +10,29 @@ export function insertWeatherData(APICallObject){
 
     let forecastArray = APICallObject.days; 
 
-    for(let i = 1; i < 4; i++){
-        let currentForecastDay = forecastArray[i]; 
-        console.log(currentForecastDay);
+    if(forecastDivContainer.childNodes.length < 3){
 
-        let forecastDayDiv = document.createElement('div'); 
-        let forecastDayList = document.createElement('ul')
+        for(let i = 1; i < 4; i++){
+            let currentForecastDay = forecastArray[i]; 
+            console.log(currentForecastDay);
 
-        forecastDayDiv.append(forecastDayList); 
+            let forecastDayDiv = document.createElement('div'); 
+            let forecastDayList = document.createElement('ul')
 
-        let forecastDayDate = document.createElement('li')
-        forecastDayDate.textContent = `Date: ${currentForecastDay.datetime}`; 
+            forecastDayDiv.append(forecastDayList); 
 
-        let forecastDayTemp = document.createElement('li'); 
-        forecastDayTemp.textContent = `Forecasted Temp: ${currentForecastDay.temp}`
+            let forecastDayDate = document.createElement('li')
+            forecastDayDate.textContent = `Date: ${currentForecastDay.datetime}`; 
 
-        forecastDayList.append(forecastDayDate, forecastDayTemp);
+            let forecastDayTemp = document.createElement('li'); 
+            forecastDayTemp.textContent = `Forecasted Temp: ${currentForecastDay.temp}`
 
-
-        forecastDivContainer.append(forecastDayDiv); 
-        
+            forecastDayList.append(forecastDayDate, forecastDayTemp);
 
 
+            forecastDivContainer.append(forecastDayDiv); 
+
+        }
     }
-
 
 }

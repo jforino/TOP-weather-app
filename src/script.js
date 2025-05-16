@@ -9,7 +9,7 @@ let userSearchResultsObject;
 async function waitForUserInputAndCallAPI() {
     while (true){
         const APICallResults = await grabUserCitySearchInput(); 
-
+        
         console.log(APICallResults);
 
         insertWeatherData(APICallResults); 

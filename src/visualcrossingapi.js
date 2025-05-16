@@ -7,7 +7,3 @@ export async function callVisualCrossingAPI(cityName){
     APICallResultsObject = APICall.json();
     return APICallResultsObject; 
 }
-
-export function parseObjectData(){
-    
-}
