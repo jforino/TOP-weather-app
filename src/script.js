@@ -3,6 +3,7 @@ import { grabUserCitySearchInput } from './input-handler.js'
 import { callVisualCrossingAPI } from "./visualcrossingapi.js";
 import { insertWeatherData } from "./render-DOM.js";
 
+
 let currentUserCitySearch;
 let userSearchResultsObject; 
 

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.arvo-regular {
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .arvo-bold {
+    font-family: "Arvo", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .arvo-regular-italic {
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .arvo-bold-italic {
+    font-family: "Arvo", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  /* Import font family + classes  */
+
+body {
+    background-color: #F8F3D9;
+    font-family: "Arvo", serif;
+}
+
+#user-search-input-container {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#user-input-field {
+    width: 200px;
+}
+
+#weather-display-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#weather-display-container > * {
+    margin: 5px;
+}
+
+#forecast-div-container li {
+    list-style: none;
+    text-align: center;
+}
+
+
+
+#forecast-div-container ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 0px;
+    border: 1px solid black;
+}
+
+#forecast-div-container div {
+    margin-top: 20px;
+
+}
+
+#forecast-div-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#conditions-image {
+    width: 110px;
+    height: 110px;
+    visibility: hidden;
+}
