@@ -1,4 +1,4 @@
-import { format } from 'date-fns'; 
+import { parse, format } from 'date-fns'; 
 
 const cityNameDivHolder = document.getElementById('city-name'); 
 const currentTempHolder = document.getElementById('current-temp'); 

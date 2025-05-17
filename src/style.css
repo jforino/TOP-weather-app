@@ -86,9 +86,8 @@ body {
 #loading-div{
     justify-content: center;
     align-items: center;
-    margin: 30px 50vw;
-    width: 50%;
-    height: 50%;
+    margin: 50vh 50vw;
+
 }
 
 .no-field-input {
