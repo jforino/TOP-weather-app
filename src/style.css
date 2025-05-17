@@ -90,3 +90,7 @@ body {
     width: 50%;
     height: 50%;
 }
+
+.no-field-input {
+    outline: 2px red solid;
+}

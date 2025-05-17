@@ -10,14 +10,21 @@ export function grabUserCitySearchInput(){
         
     const handleSubmit = (e) => {
         e.preventDefault(); 
-
-        loadingDiv.style.display = 'block'
-
         const input = userInputField.value;
+
+        if (input !== ''){
+            userInputField.classList.remove('no-field-input');
+
+            loadingDiv.style.display = 'block'
+            setTimeout( () => {
+                resolve(callVisualCrossingAPI(input))
+            }, 1000);
+        }
+        else {
+            userInputField.setCustomValidity('Enter in a city!'); 
+            userInputField.classList.add('no-field-input');
+        }
         
-        setTimeout( () => {
-            resolve(callVisualCrossingAPI(input))
-        }, 1000);
         
 
     }
