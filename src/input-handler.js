@@ -6,12 +6,19 @@ export function grabUserCitySearchInput(){
 
     let userInputField = document.getElementById('user-input-field'); 
     let userFormField = document.getElementById('user-search-input-form'); 
+    const loadingDiv = document.getElementById('loading-div');
         
     const handleSubmit = (e) => {
         e.preventDefault(); 
 
+        loadingDiv.style.display = 'block'
+
         const input = userInputField.value;
-        resolve(callVisualCrossingAPI(input)); 
+        
+        setTimeout( () => {
+            resolve(callVisualCrossingAPI(input))
+        }, 1000);
+        
 
     }
    
